@@ -1,0 +1,26 @@
+
+Set Environment:
+https://github.com/do-community/travellist-laravel-demo
+copy file Dockerfile, docker-compose.yml, folder 'docker-compose'
+docker-compose.yml
+        - php: change path volumes to folder web
+        - nginx: change path volume to folder web
+        - delete MySQL
+        - add MariaDB
+        - add phpmyadmin
+
+step 1: docker-compose build
+step 2: go to php container and run composer install
+step 3: if there error about [Solved] PackageManifest.php
+        https://stackoverflow.com/questions/61177995/laravel-packagemanifest-php-undefined-index-name
+        https://exerror.com/packagemanifest-php-line-122-undefined-index-name/
+step 4: import database
+step 5: delete folder public/storage
+step 6: container php run php artisan storage:link
+step 7: fix some config
+
+Error Link path: http://IP 
+Find & Replace: https://bobcares.com/blog/find-and-replace-in-phpmyadmin/
+
+Error Nginx 413 Request Entity Too Large: client request entity body 120M
+        https://stackoverflow.com/questions/26608606/413-request-entity-too-large
